@@ -1,0 +1,75 @@
+#tool-box {
+    background: #222;
+    padding: 10px 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    height: auto;
+    max-height: calc(100% - 20px);
+    overflow-y: auto;
+}
+
+#tool-box .tools-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#tool-box .tools-container .tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303030;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    color: #ddd;
+}
+
+#tool-box .tools-container .tool:hover {
+    background-color: #404040;
+    transform: scale(1.05);
+}
+
+#tool-box .tools-container .tool.active {
+    background-color: #5100ff;
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(81, 0, 255, 0.4);
+}
+
+/* Color Panel Styles */
+.color-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.color-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #5100ff;
+}
